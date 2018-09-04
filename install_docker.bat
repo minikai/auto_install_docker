@@ -3,9 +3,9 @@ copy /Y start_inference.bat "C:\Users\mickey\AppData\Roaming\Microsoft\Windows\S
 certutil -addstore "TrustedPublisher" registry.cert 
 set file="C:\Program Files\Docker\Docker\Docker for Windows.exe"
 if exist %file% (
-¡@¡@echo file is exists
+    echo file is exists
 )else (
-¡@¡@"Docker for Windows Installer.exe" install --quiet -Verb RunAs
+    "Docker for Windows Installer.exe" install --quiet -Verb RunAs
 )
 (
 echo {  "registry-mirrors": [],  "insecure-registries": [    "124.9.14.15:443"  ],  "debug": true,  "experimental": false}
